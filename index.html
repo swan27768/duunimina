@@ -602,6 +602,33 @@ button:focus-visible {
   outline: 3px solid #F2A65A;
   outline-offset: 3px;
 }
+.action-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.action-btn {
+  min-width: 200px;
+  padding: .9rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background: #1F3A5F;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .08em;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0,0,0,.2);
+}
+
+.action-btn:hover,
+.action-btn:focus-visible {
+  background: #F2A65A;
+  color: #1F3A5F;
+  outline: 3px solid #1F3A5F;
+}
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">/* ========= NAVBAR ========= */
 $(document).on(":passagestart", function (event) {
   if (!event || !event.passage) return;
@@ -744,7 +771,7 @@ $(&#39;body&#39;).addClass(&#39;hide-navbar&#39;);
 &lt;div class=&quot;start-screen&quot;&gt;
   &lt;div class=&quot;start-box&quot;&gt;
 
-    &lt;h1&gt;TYÖMERKKI&lt;/h1&gt;
+    &lt;h1&gt;DuuniMinä&lt;/h1&gt;
     &lt;p&gt;
       Löydä oma tapasi toimia, oppia ja jaksaa.&lt;br&gt;
       Tämä testi auttaa sinua hahmottamaan, millaisessa työssä viihdyt ja missä voit onnistua.
@@ -907,11 +934,25 @@ onclick=&quot;SugarCube.State.variables.log += 1; SugarCube.Engine.play(&#39;Res
 
 &lt;p&gt; Näissä töissä saat käyttää empatiaa, kuuntelutaitoa ja halua auttaa muita.&lt;/p&gt;
 
-&lt;div class=&quot;no-print&quot;&gt;
-   &lt;&lt;link &quot;Tulosta tämä kortti&quot;&gt;&gt;&lt;&lt;run window.print()&gt;&gt;&lt;&lt;/link&gt;&gt;
-  &lt;&lt;link &quot;Katso oma profiilikortti&quot;&gt;&gt;&lt;&lt;goto &quot;Profile_Auttaa&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-  &lt;&lt;link &quot;Takaisin tulokseen&quot;&gt;&gt;&lt;&lt;goto &quot;Result&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;div class=&quot;no-print action-row&quot;&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;window.print()&quot;&gt;
+    Tulosta tämä kortti
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Profile_Auttaa&#39;)&quot;&gt;
+    Katso oma profiilikortti
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Result&#39;)&quot;&gt;
+    Takaisin tulokseen
+  &lt;/button&gt;
+
 &lt;/div&gt;
+
 
 
 
@@ -935,11 +976,22 @@ onclick=&quot;SugarCube.State.variables.log += 1; SugarCube.Engine.play(&#39;Res
 
 &lt;p&gt; Näissä töissä saat käyttää rohkeutta, esiintymistaitoja ja kykyä innostaa muita.&lt;/p&gt;
 
-&lt;div class=&quot;no-print&quot;&gt;
-  &lt;&lt;link &quot;Takaisin tulokseen&quot;&gt;&gt;&lt;&lt;goto &quot;Result&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-  &lt;&lt;link &quot;Katso oma profiilikortti&quot;&gt;&gt;&lt;&lt;goto &quot;Profile_Vaikuttaa&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-  &lt;&lt;link &quot;Tulosta tämä kortti&quot;&gt;&gt;&lt;&lt;run window.print()&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;/div&gt;
+&lt;div class=&quot;no-print action-row&quot;&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;window.print()&quot;&gt;
+    Tulosta tämä kortti
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Profile_Auttaa&#39;)&quot;&gt;
+    Katso oma profiilikortti
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Result&#39;)&quot;&gt;
+    Takaisin tulokseen
+  &lt;/button&gt;
 
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="10" name="Card_Ymmartaa" tags="" position="500,925" size="100,100">&lt;div class=&quot;print-card&quot;&gt;
@@ -962,11 +1014,25 @@ onclick=&quot;SugarCube.State.variables.log += 1; SugarCube.Engine.play(&#39;Res
 
 &lt;p&gt; Näissä töissä saat käyttää ajattelua, huolellisuutta ja ongelmanratkaisua.&lt;/p&gt;
 
-&lt;div class=&quot;no-print&quot;&gt;
-  &lt;&lt;link &quot;Takaisin tulokseen&quot;&gt;&gt;&lt;&lt;goto &quot;Result&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-  &lt;&lt;link &quot;Katso oma profiilikortti&quot;&gt;&gt;&lt;&lt;goto &quot;Profile_Ymmartaa&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-  &lt;&lt;link &quot;Tulosta tämä kortti&quot;&gt;&gt;&lt;&lt;run window.print()&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;div class=&quot;no-print action-row&quot;&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;window.print()&quot;&gt;
+    Tulosta tämä kortti
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Profile_Auttaa&#39;)&quot;&gt;
+    Katso oma profiilikortti
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Result&#39;)&quot;&gt;
+    Takaisin tulokseen
+  &lt;/button&gt;
+
 &lt;/div&gt;
+
 
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="11" name="Card_Luoda" tags="" position="625,925" size="100,100">&lt;div class=&quot;print-card&quot;&gt;
@@ -989,11 +1055,25 @@ onclick=&quot;SugarCube.State.variables.log += 1; SugarCube.Engine.play(&#39;Res
 
 &lt;p&gt; Näissä töissä saat käyttää mielikuvitusta, ideointia ja luovuutta.&lt;/p&gt;
 
-&lt;div class=&quot;no-print&quot;&gt;
-  &lt;&lt;link &quot;Takaisin tulokseen&quot;&gt;&gt;&lt;&lt;goto &quot;Result&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-  &lt;&lt;link &quot;Katso oma profiilikortti&quot;&gt;&gt;&lt;&lt;goto &quot;Profile_Luoda&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-  &lt;&lt;link &quot;Tulosta tämä kortti&quot;&gt;&gt;&lt;&lt;run window.print()&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;div class=&quot;no-print action-row&quot;&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;window.print()&quot;&gt;
+    Tulosta tämä kortti
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Profile_Auttaa&#39;)&quot;&gt;
+    Katso oma profiilikortti
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Result&#39;)&quot;&gt;
+    Takaisin tulokseen
+  &lt;/button&gt;
+
 &lt;/div&gt;
+
 
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="12" name="Card_Yhdistaa" tags="" position="750,925" size="100,100">&lt;div class=&quot;print-card&quot;&gt;
@@ -1016,11 +1096,25 @@ onclick=&quot;SugarCube.State.variables.log += 1; SugarCube.Engine.play(&#39;Res
 
 &lt;p&gt; Näissä töissä saat käyttää vuorovaikutustaitoja ja hyvää fiilistä.&lt;/p&gt;
 
-&lt;div class=&quot;no-print&quot;&gt;
-  &lt;&lt;link &quot;Takaisin tulokseen&quot;&gt;&gt;&lt;&lt;goto &quot;Result&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-  &lt;&lt;link &quot;Katso oma profiilikortti&quot;&gt;&gt;&lt;&lt;goto &quot;Profile_Yhdistaa&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-  &lt;&lt;link &quot;Tulosta tämä kortti&quot;&gt;&gt;&lt;&lt;run window.print()&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;div class=&quot;no-print action-row&quot;&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;window.print()&quot;&gt;
+    Tulosta tämä kortti
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Profile_Auttaa&#39;)&quot;&gt;
+    Katso oma profiilikortti
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Result&#39;)&quot;&gt;
+    Takaisin tulokseen
+  &lt;/button&gt;
+
 &lt;/div&gt;
+
 
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="13" name="Card_Turvata" tags="" position="875,925" size="100,100">&lt;div class=&quot;print-card&quot;&gt;
@@ -1043,11 +1137,25 @@ onclick=&quot;SugarCube.State.variables.log += 1; SugarCube.Engine.play(&#39;Res
 
 &lt;p&gt; Näissä töissä saat käyttää huolellisuutta ja vastuullisuutta.&lt;/p&gt;
 
-&lt;div class=&quot;no-print&quot;&gt;
-  &lt;&lt;link &quot;Takaisin tulokseen&quot;&gt;&gt;&lt;&lt;goto &quot;Result&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-  &lt;&lt;link &quot;Katso oma profiilikortti&quot;&gt;&gt;&lt;&lt;goto &quot;Profile_Turvata&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-  &lt;&lt;link &quot;Tulosta tämä kortti&quot;&gt;&gt;&lt;&lt;run window.print()&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;div class=&quot;no-print action-row&quot;&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;window.print()&quot;&gt;
+    Tulosta tämä kortti
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Profile_Auttaa&#39;)&quot;&gt;
+    Katso oma profiilikortti
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Result&#39;)&quot;&gt;
+    Takaisin tulokseen
+  &lt;/button&gt;
+
 &lt;/div&gt;
+
 
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="14" name="Profile_Auttaa" tags="" position="250,1050" size="100,100">&lt;div class=&quot;print-card&quot;&gt;
@@ -1071,12 +1179,25 @@ onclick=&quot;SugarCube.State.variables.log += 1; SugarCube.Engine.play(&#39;Res
 &lt;li&gt;ilmapiiri on turvallinen&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;no-print&quot;&gt;
-&lt;&lt;link &quot;Takaisin ammattikortteihin&quot;&gt;&gt;&lt;&lt;goto &quot;Card_Auttaa&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Takaisin tulokseen&quot;&gt;&gt;&lt;&lt;goto &quot;Result&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
- &lt;&lt;link &quot;Tulosta tämä kortti&quot;&gt;&gt;&lt;&lt;run window.print()&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;div class=&quot;no-print action-row&quot;&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Card_Auttaa&#39;)&quot;&gt;
+    Takaisin ammattikortteihin
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Result&#39;)&quot;&gt;
+    Takaisin tulokseen
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;window.print()&quot;&gt;
+    Tulosta tämä kortti
+  &lt;/button&gt;
 
 &lt;/div&gt;
+
 
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="15" name="Profile_Vaikuttaa" tags="" position="375,1050" size="100,100">&lt;div class=&quot;print-card&quot;&gt;
@@ -1100,11 +1221,25 @@ onclick=&quot;SugarCube.State.variables.log += 1; SugarCube.Engine.play(&#39;Res
 &lt;li&gt;työ on vaihtelevaa&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;no-print&quot;&gt;
-&lt;&lt;link &quot;Takaisin ammattikortteihin&quot;&gt;&gt;&lt;&lt;goto &quot;Card_Vaikuttaa&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Takaisin tulokseen&quot;&gt;&gt;&lt;&lt;goto &quot;Result&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
- &lt;&lt;link &quot;Tulosta tämä kortti&quot;&gt;&gt;&lt;&lt;run window.print()&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;div class=&quot;no-print action-row&quot;&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Card_Auttaa&#39;)&quot;&gt;
+    Takaisin ammattikortteihin
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Result&#39;)&quot;&gt;
+    Takaisin tulokseen
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;window.print()&quot;&gt;
+    Tulosta tämä kortti
+  &lt;/button&gt;
+
 &lt;/div&gt;
+
 
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="16" name="Profile_Ymmartaa" tags="" position="500,1050" size="100,100">&lt;div class=&quot;print-card&quot;&gt;
@@ -1129,10 +1264,23 @@ onclick=&quot;SugarCube.State.variables.log += 1; SugarCube.Engine.play(&#39;Res
 &lt;li&gt;sinulla on oma työrauha&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;no-print&quot;&gt;
-&lt;&lt;link &quot;Takaisin ammattikortteihin&quot;&gt;&gt;&lt;&lt;goto &quot;Card_Ymmartaa&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Takaisin tulokseen&quot;&gt;&gt;&lt;&lt;goto &quot;Result&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
- &lt;&lt;link &quot;Tulosta tämä kortti&quot;&gt;&gt;&lt;&lt;run window.print()&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;div class=&quot;no-print action-row&quot;&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Card_Auttaa&#39;)&quot;&gt;
+    Takaisin ammattikortteihin
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Result&#39;)&quot;&gt;
+    Takaisin tulokseen
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;window.print()&quot;&gt;
+    Tulosta tämä kortti
+  &lt;/button&gt;
+
 &lt;/div&gt;
 
 &lt;/div&gt;
@@ -1158,11 +1306,25 @@ onclick=&quot;SugarCube.State.variables.log += 1; SugarCube.Engine.play(&#39;Res
 &lt;li&gt;saat tehdä omannäköisiä juttuja&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;no-print&quot;&gt;
-&lt;&lt;link &quot;Takaisin ammattikortteihin&quot;&gt;&gt;&lt;&lt;goto &quot;Card_Luoda&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Takaisin tulokseen&quot;&gt;&gt;&lt;&lt;goto &quot;Result&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-  &lt;&lt;link &quot;Tulosta tämä kortti&quot;&gt;&gt;&lt;&lt;run window.print()&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;div class=&quot;no-print action-row&quot;&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Card_Auttaa&#39;)&quot;&gt;
+    Takaisin ammattikortteihin
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Result&#39;)&quot;&gt;
+    Takaisin tulokseen
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;window.print()&quot;&gt;
+    Tulosta tämä kortti
+  &lt;/button&gt;
+
 &lt;/div&gt;
+
 
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="18" name="Profile_Yhdistaa" tags="" position="750,1050" size="100,100">&lt;div class=&quot;print-card&quot;&gt;
@@ -1187,11 +1349,25 @@ onclick=&quot;SugarCube.State.variables.log += 1; SugarCube.Engine.play(&#39;Res
 &lt;li&gt;työ on vuorovaikutteista&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;no-print&quot;&gt;
-&lt;&lt;link &quot;Takaisin ammattikortteihin&quot;&gt;&gt;&lt;&lt;goto &quot;Card_Yhdistaa&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Takaisin tulokseen&quot;&gt;&gt;&lt;&lt;goto &quot;Result&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-  &lt;&lt;link &quot;Tulosta tämä kortti&quot;&gt;&gt;&lt;&lt;run window.print()&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;div class=&quot;no-print action-row&quot;&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Card_Auttaa&#39;)&quot;&gt;
+    Takaisin ammattikortteihin
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Result&#39;)&quot;&gt;
+    Takaisin tulokseen
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;window.print()&quot;&gt;
+    Tulosta tämä kortti
+  &lt;/button&gt;
+
 &lt;/div&gt;
+
 
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="19" name="Profile_Turvata" tags="" position="875,1050" size="100,100">&lt;div class=&quot;print-card&quot;&gt;
@@ -1216,11 +1392,25 @@ onclick=&quot;SugarCube.State.variables.log += 1; SugarCube.Engine.play(&#39;Res
 &lt;li&gt;työ on turvallista&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;no-print&quot;&gt;
-&lt;&lt;link &quot;Takaisin ammattikortteihin&quot;&gt;&gt;&lt;&lt;goto &quot;Card_Turvata&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Takaisin tulokseen&quot;&gt;&gt;&lt;&lt;goto &quot;Result&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-  &lt;&lt;link &quot;Tulosta tämä kortti&quot;&gt;&gt;&lt;&lt;run window.print()&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;div class=&quot;no-print action-row&quot;&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Card_Auttaa&#39;)&quot;&gt;
+    Takaisin ammattikortteihin
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;SugarCube.Engine.play(&#39;Result&#39;)&quot;&gt;
+    Takaisin tulokseen
+  &lt;/button&gt;
+
+  &lt;button class=&quot;action-btn&quot;
+    onclick=&quot;window.print()&quot;&gt;
+    Tulosta tämä kortti
+  &lt;/button&gt;
+
 &lt;/div&gt;
+
 
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="20" name="ResultCalc" tags="" position="625,800" size="100,100">&lt;&lt;set $skill1 to &quot;Kieli&quot;&gt;&gt;
