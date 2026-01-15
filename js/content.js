@@ -45,8 +45,8 @@ window.TYPE_PROFILES = {
 
   "Tekijä": {
     title: "Tekijä",
-    lead: "Tykkäät tehdä käsilläsi ja nähdä työsi jäljen konkreettisesti.",
-    meaning: "Olet vahvimmillasi, kun saat rakentaa, huoltaa ja tehdä korjaustöitä – ja nähdä, että asiat toimivat.",
+    lead: "Tykkäät tehdä asioita ja nähdä työsi jäljen.",
+    meaning: "Olet vahvimmillasi, kun saat tehdä omin käsin, keskittyä tekemiseen ja nähdä työsi tulokset.",
     promise: "Sinä teet asiat todeksi.",
     essence: "käytännön taitoa, sitkeyttä ja tekemisen varmuutta"
   },

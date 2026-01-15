@@ -237,7 +237,6 @@ function showResult() {
   }
 }
 
-
 // Tee funktiot varmasti löydettäväksi inline-onclickeille
 window.startTest = startTest;
 window.setSeed = setSeed;
