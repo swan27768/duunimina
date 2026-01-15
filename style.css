@@ -219,4 +219,9 @@ button:focus-visible{
   letter-spacing: 0.15em;
   margin-bottom: 1rem;
 }
+#start h1 {
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+}
 
